@@ -6,33 +6,33 @@
 
 * How to put username and score into DB?
 
-Send POST request to
+	Send POST request to
 
-http://www.jaejoonglee.com/healthboy/score
+	http://www.jaejoonglee.com/healthboy/score
 
-with
+	with
 
-{
-	"username": username1,
-	"score": 100
-}
+	{
+		"username": username1,
+		"score": 100
+	}
 
-json format.
+	json format.
 
 
 * How to get a score by username?
 
-Send GET request to
+	Send GET request to
 
-http://www.jaejoonglee.com/healthboy/score/<username>
+	http://www.jaejoonglee.com/healthboy/score/<username>
 
-E.x) if username is jaejoong then, the url will be http://www.jaejoonglee.com/healthboy/score/jaejoong
+	E.x) if username is jaejoong then, the url will be http://www.jaejoonglee.com/healthboy/score/jaejoong
 
-It will return json format like this:
+	It will return json format like this:
 
-{
-	"username": jaejoong,
-	"score": 100
-}
+	{
+		"username": jaejoong,
+		"score": 100
+	}
 
 
