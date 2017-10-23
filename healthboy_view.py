@@ -8,7 +8,7 @@ hb = Blueprint('healthboy', __name__)
 def score_handler():
     data = request.form
     username = data['name']
-    score = score['latitude']
+    score = data['score']
     if (username is None or score is None):
             result = "Check username or score."
             response = Response(
