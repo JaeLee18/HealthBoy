@@ -8,7 +8,8 @@ hb = Blueprint('healthboy', __name__)
 @hb.route("/score", methods=['POST'])
 def score_handler():
     data = request.form
-    username = data['name']
+    print(data)
+    username = data['username']
     score = data['score']
     if (username is None or score is None):
             result = "Check username or score."
