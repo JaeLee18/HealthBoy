@@ -15,13 +15,13 @@ def score_handler():
                 response=json.dumps(result),
                 status=400,
                 mimetype='application/json'
-               )
+                )
             return response
     result = {
             'username': username,
             'score': score
         }
-		check_player = Player.query.filter_by(username=username).first()
+    check_player = Player.query.filter_by(username=username).first()
     if(check_player is None):
         player = Player(username=username, score=score)
         db.session.add(player)
@@ -38,7 +38,7 @@ def score_handler():
 
 @hb.route("/score/<username>", methods=['GET'])
 def get_score_by_username(username):
-	if username is None:
+    if username is None:
         result = "Error: username is null."
         response = Response(
         response=json.dumps(result),
